@@ -1,8 +1,10 @@
 % load data credicard data into M
 M = csvread('creditcard.csv');
+
 % Divide data set into class 0 and class 1
 M0 = M(M(:,31) == 0,:);
 M1 = M(M(:,31) == 1,:);
+
 % Shuffle dataset and divide into testing and training
 M0TrainIndex = randperm(284315,199021);
 M1TrainIndex = randperm(492,344);
@@ -36,3 +38,6 @@ train_y = MTrain(:,31);
 test_x = MTest(:,2:29);
 test_x = normc(test_x);
 test_y = MTest(:,31);
+
+% Save the important variables into data.mat
+save('data.mat','M','MTest','MTrain','test_x','test_y','train_x','train_y');
