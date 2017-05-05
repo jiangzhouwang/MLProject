@@ -31,3 +31,5 @@ To run k-means run km.m
 To run fcm run main_partII_FCM.m
 
 If you want to display the graphs, uncomment its that part of code. 
+
+And the dataset can be found in this page : https://www.kaggle.com/dalpozz/creditcardfraud
